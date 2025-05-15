@@ -415,7 +415,7 @@ if $IS_DOCKER; then
     echo "# ArduPilot env file. Need to be loaded by your Shell." > ~/$SHELL_LOGIN
 fi
 
-PIP_USER_ARGUMENT="--user"
+PIP_USER_ARGUMENT=""
 
 # create a Python venv on more recent releases:
 PYTHON_VENV_PACKAGE=""
