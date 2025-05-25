@@ -9,3 +9,16 @@ alias arduc='docker run --rm -it -v $PWD:/ardupilot ardupilot-dev ./waf configur
 alias ardub='docker run --rm -it -v $PWD:/ardupilot ardupilot-dev ./waf plane'
 alias sitl='docker run --rm -it -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v $PWD:/ardupilot ardupilot-dev sim_vehicle.py -v plane --console --map -w'
 ```
+
+# SITL Examples
+## Takeoff
+```bash
+# Load the waypoints
+wp load Tools/autotest/Generic_Missions/CMAC-circuit.txt
+# Send waypoints to the platform
+wp list
+# Set the platforms mode to AUTO
+mode auto
+# Arm the platforms throttle (will takeoff)
+arm throttle
+```
